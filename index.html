@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Age Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container" role="main">
+      <div class="topbar">
+        <h1>Age Calculator</h1>
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          type="button"
+          aria-pressed="false"
+          title="Toggle light mode"
+        >
+          ☀️ Light
+        </button>
+      </div>
+      <form id="age-form" novalidate>
+        <label for="start-date" class="label">Start date</label>
+        <input
+          id="start-date"
+          name="start-date"
+          type="date"
+          required
+          aria-describedby="date-help date-error"
+        />
+        <p id="date-help" class="help">Choose a date today or earlier.</p>
+        <p id="date-error" class="error" aria-live="polite"></p>
+        <button type="submit" id="calc-btn">Calculate age</button>
+      </form>
+
+      <section
+        id="results"
+        class="results"
+        aria-live="polite"
+        aria-atomic="true"
+        hidden
+      >
+        <h2>Result</h2>
+        <div class="result-grid">
+          <div class="result-item">
+            <span class="value" id="years">0</span
+            ><span class="unit">years</span>
+          </div>
+          <div class="result-item">
+            <span class="value" id="months">0</span
+            ><span class="unit">months</span>
+          </div>
+          <div class="result-item">
+            <span class="value" id="days">0</span><span class="unit">days</span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
