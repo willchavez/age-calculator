@@ -59,13 +59,15 @@
       </div>
       <form id="age-form" novalidate>
         <label for="start-date" class="label">Start date</label>
-        <input
-          id="start-date"
-          name="start-date"
-          type="date"
-          required
-          aria-describedby="date-help date-error"
-        />
+        <div class="input-container">
+            <input
+            id="start-date"
+            name="start-date"
+            type="date"
+            required
+            aria-describedby="date-help date-error"
+            />
+        </div>
         <p id="date-help" class="help">Choose a date today or earlier.</p>
         <p id="date-error" class="error" aria-live="polite"></p>
         <button type="submit" id="calc-btn">Calculate age</button>

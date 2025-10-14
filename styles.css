@@ -115,12 +115,17 @@ form {
   font-weight: 600;
 }
 
+.input-container {
+    padding: 8px 0px;
+    /* Add any other styling, like a border, here */
+}
+
 input[type="date"] {
   display: block;
   width: 100%;
   max-width: 100%;
   min-width: 0;
-  padding: 12px 0px;
+  padding: 12px;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: #0b1220;
